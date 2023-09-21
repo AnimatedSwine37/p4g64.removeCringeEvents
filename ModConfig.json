@@ -1,0 +1,25 @@
+{
+  "ModId": "p4g64.removeCringeEvents",
+  "ModName": "Remove Cringe Events",
+  "ModAuthor": "AnimatedSwine37",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Removes the hot springs, camping trip, and culture festival cross dressing and group date café events from the game. Note that which are removed can be configured.",
+  "ModDll": "p4g64.removeCringeEvents.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/p4g64.removeCringeEvents.dll",
+  "ModR2RManagedDll64": "x64/p4g64.removeCringeEvents.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "p4g64.removeCringeEvents.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "reloaded.sharedlib.hooks",
+    "reloaded.universal.fileemulationframework.bf",
+    "crifs.v2.hook"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": ["p4g.exe"],
+  "ProjectUrl": ""
+}

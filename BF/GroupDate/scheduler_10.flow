@@ -1,0 +1,79 @@
+// Remove Group Date Cafe
+void sdl10_22_AM_B_hook()
+{
+    // No group date caffe class decision event
+}
+
+void sdl10_27_PM_C_hook()
+{
+    // Fix NPC flags
+    BIT_ON(0 + 0x0400 + 454);
+    BIT_ON(0 + 0x0400 + 432);
+    BIT_ON(0 + 0x0400 + 458);
+    BIT_ON(0 + 0x0400 + 459);
+    BIT_ON(0 + 0x0400 + 434);
+    BIT_ON(0 + 0x0400 + 452);
+    BIT_ON(0 + 0x0400 + 453);
+    BIT_ON(0 + 0x0400 + 457);
+    BIT_ON(0 + 0x0400 + 433);
+    BIT_ON(0 + 0x0400 + 624);
+    BIT_ON(0 + 0x0400 + 463);
+    BIT_ON(0 + 0x0400 + 464);
+    BIT_ON(0 + 0x0400 + 472);
+    BIT_ON(0 + 0x0400 + 473);
+    BIT_ON(0 + 0x0400 + 474);
+    BIT_ON(0 + 0x0400 + 475);
+    BIT_ON(0 + 0x0400 + 465);
+    BIT_ON(0 + 0x0400 + 455);
+    BIT_ON(0 + 0x0400 + 481);
+    BIT_ON(0 + 0x0400 + 456);
+    BIT_ON(0 + 0x0400 + 470);
+    BIT_ON(0 + 0x0400 + 468);
+    BIT_ON(0 + 0x0400 + 469);
+    BIT_ON(0 + 0x0400 + 503);
+    BIT_ON(0 + 0x0400 + 1155);
+    BIT_ON(0 + 0x0400 + 1156);
+
+    CALL_FIELD(6, 6, 2, 0);
+}
+
+void sdl10_29_PM_B_hook()
+{
+
+    if (EVT_FUNCTION_000F(21) == 1 || EVT_FUNCTION_000F(22) == 1 || EVT_FUNCTION_0010(21) == 1 || EVT_FUNCTION_0010(22) == 1)
+    {
+        BIT_ON(0 + 0x0400 + 554);
+    }
+
+    if (EVT_FUNCTION_000F(27) == 1 || EVT_FUNCTION_000F(28) == 1 || EVT_FUNCTION_0010(27) == 1 || EVT_FUNCTION_0010(28) == 1)
+    {
+        BIT_ON(0 + 0x0400 + 553);
+    }
+
+    if (GET_SL_LEVEL(25) >= 1 && GET_SL_LEVEL(25) <= 4 || GET_SL_LEVEL(25) == 10)
+    {
+        BIT_ON(0 + 0x0400 + 558);
+    }
+
+    if (GET_SL_LEVEL(0x10) >= 1 || GET_SL_LEVEL(17) >= 1)
+    {
+        BIT_ON(0 + 0x0400 + 555);
+    }
+    else if (GET_SL_LEVEL(21) >= 1 || GET_SL_LEVEL(22) >= 1 && BIT_CHK(0 + 0x0400 + 554) == 0)
+    {
+        BIT_ON(0 + 0x0400 + 555);
+    }
+    else if (GET_SL_LEVEL(27) >= 1 || GET_SL_LEVEL(28) >= 1 && BIT_CHK(0 + 0x0400 + 553) == 0)
+    {
+        BIT_ON(0 + 0x0400 + 555);
+    }
+    else if (BIT_CHK(0 + 0x0400 + 558) == 1)
+    {
+        BIT_ON(0 + 0x0400 + 555);
+    }
+    
+    if (BIT_CHK(0 + 0x0400 + 555) == 1)
+    {
+        CALL_EVENT(890, 81, 0);
+    }
+}

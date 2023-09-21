@@ -1,0 +1,30 @@
+import("hotsprings.msg");
+
+// Remove hotsprings event
+void sdl10_30_PM_D_hook()
+{
+    INCREASE_SL(24);
+    CALL_EVENT(335, 1, 0);
+    FUNCTION_0065();
+    FUNCTION_000F();
+    OPEN_MSG_WIN();
+    MSG(GoToHotsprings);
+    get_costume();
+    MSG(NightEnd);
+    CLOSE_MSG_WIN();
+    WAIT(60);
+    STOP_BGM(30);
+    WAIT(60);
+    SAVE_ASK(4);
+    NS_DISABLE_PLAYER_MOVEMENT();
+}
+
+void get_costume()
+{
+    SET_MSG_VAR( 0, ( 1792 + 89 ), 1 );
+    MSG( MSG_COSTUME_000 );
+    SET_ITEM( ( 1792 + 89 ), 1 );
+    SET_ITEM( ( 1792 + 90 ), 1 );
+    SET_ITEM( ( 1792 + 94 ), 1 );
+    SET_ITEM( ( 1792 + 96 ), 1 );
+}

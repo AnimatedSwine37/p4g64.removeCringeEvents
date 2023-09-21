@@ -1,0 +1,51 @@
+// Remove cross-dressing
+void sdl10_27_AM_A_hook()
+{
+    everymorning();
+    CALL_EVENT(461, 1, 0);
+}
+
+void sdl10_27_PM_A_hook()
+{
+    // No going up to the roof to complain about being signed up
+}
+
+void sdl10_28_PM_A_hook()
+{
+    // Guys don't get signed up
+}
+
+void sdl10_28_PM_C_hook()
+{
+    // Fix NPC flags
+    BIT_OFF(0 + 0x0400 + 481);
+    BIT_ON(0 + 0x0400 + 625);
+    BIT_ON(0 + 0x0400 + 450);
+    BIT_ON(0 + 0x0400 + 451);
+    BIT_ON(0 + 0x0400 + 436);
+    BIT_ON(0 + 0x0400 + 495);
+    BIT_ON(0 + 0x0400 + 496);
+    BIT_ON(0 + 0x0400 + 446);
+    BIT_ON(0 + 0x0400 + 476);
+    BIT_ON(0 + 0x0400 + 449);
+    BIT_ON(0 + 0x0400 + 468);
+    BIT_ON(0 + 0x0400 + 469);
+    BIT_ON(0 + 0x0400 + 692);
+    BIT_ON(0 + 0x0400 + 503);
+    BIT_ON(0 + 0x0400 + 1152);
+    BIT_ON(0 + 0x0400 + 1154);
+    BIT_ON(0 + 0x0400 + 1160);
+    BIT_ON(0 + 0x0400 + 1161);
+
+    CALL_FIELD(6, 6, 2, 0);
+}
+
+void sdl10_30_PM_B_hook()
+{
+    // Give the drag costumes as they were from one of the skipped events
+    SET_ITEM(1792 + 41, 1);
+    SET_ITEM(1792 + 42, 1);
+    SET_ITEM(1792 + 46, 1);
+    SET_ITEM(1792 + 48, 1);
+    CALL_EVENT(334, 1, 0);
+}

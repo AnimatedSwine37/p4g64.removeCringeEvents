@@ -78,4 +78,13 @@
     <Folder Include="CPK\CultureFestival\data_e.cpk\scheduler\" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<DefaultItemExcludes>$(DefaultItemExcludes);Submodules\**</DefaultItemExcludes>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="Submodules\CriFs.V2.Hook.ReloadedII\Interfaces\CriFs.V2.Hook.Interfaces\CriFs.V2.Hook.Interfaces.csproj" />
+    <ProjectReference Include="Submodules\FileEmulationFramework\Emulator\Interfaces\BF.File.Emulator.Interfaces\BF.File.Emulator.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

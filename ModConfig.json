@@ -3,23 +3,88 @@
   "ModName": "Remove Cringe Events",
   "ModAuthor": "AnimatedSwine37",
   "ModVersion": "1.0.0",
-  "ModDescription": "Removes the hot springs, camping trip, and culture festival cross dressing and group date café events from the game. Note that which are removed can be configured.",
+  "ModDescription": "Removes the hot springs, camping trip, and culture festival cross dressing and group date caf\u00E9 events from the game. Note that which are removed can be configured.",
   "ModDll": "p4g64.removeCringeEvents.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "x86/p4g64.removeCringeEvents.dll",
   "ModR2RManagedDll64": "x64/p4g64.removeCringeEvents.dll",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": false,
+  "HasExports": false,
   "IsLibrary": false,
   "ReleaseMetadataFileName": "p4g64.removeCringeEvents.ReleaseMetadata.json",
-  "PluginData": {},
+  "PluginData": {
+    "GitHubRelease": {
+      "UserName": "AnimatedSwine37",
+      "RepositoryName": "p4g64.removeCringeEvents",
+      "UseReleaseTag": true,
+      "AssetFileName": "Mod.zip"
+    },
+    "GameBanana": {
+      "ItemType": "Mod",
+      "ItemId": 469834
+    },
+    "GitHubDependencies": {
+      "IdToConfigMap": {
+        "crifs.v2.hook": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "CriFs.V2.Hook.ReloadedII",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "CriFs.V2.Hook.ReleaseMetadata.json"
+        },
+        "reloaded.sharedlib.hooks": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
+          },
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
+        },
+        "reloaded.universal.fileemulationframework.bf": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "FileEmulationFramework",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "BF.File.Emulator.ReleaseMetadata.json"
+        },
+        "Reloaded.Memory.SigScan.ReloadedII": {
+          "Config": {
+            "UserName": "Reloaded-Project",
+            "RepositoryName": "Reloaded.Memory.SigScan",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "Reloaded.Memory.SigScan.ReloadedII.ReleaseMetadata.json"
+        },
+        "reloaded.universal.fileemulationframework": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "FileEmulationFramework",
+            "UseReleaseTag": false,
+            "AssetFileName": "Mod.zip"
+          },
+          "ReleaseMetadataName": "Reloaded.Universal.FileEmulationFramework.ReleaseMetadata.json"
+        }
+      }
+    }
+  },
   "IsUniversalMod": false,
   "ModDependencies": [
+    "crifs.v2.hook",
     "reloaded.sharedlib.hooks",
-    "reloaded.universal.fileemulationframework.bf",
-    "crifs.v2.hook"
+    "reloaded.universal.fileemulationframework.bf"
   ],
   "OptionalDependencies": [],
-  "SupportedAppId": ["p4g.exe"],
+  "SupportedAppId": [
+    "p4g.exe"
+  ],
   "ProjectUrl": ""
 }
